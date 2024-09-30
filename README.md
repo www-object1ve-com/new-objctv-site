@@ -2,7 +2,7 @@
 Novo site da Objective
 
 ## Instalação
-Instale todas as dependências necessárias para o projeto utilizando o comando:
+Instale todas as dependências do node necessárias para o projeto utilizando o comando dentro do tema **objective**:
 ```bash
   npm install
 ```
@@ -11,9 +11,6 @@ Instale todas as dependências necessárias para o projeto utilizando o comando:
 Após garantir que Docker e Docker Compose estão corretamente instalados em sua máquina, siga estes passos:
 
 - Caso já exista um dump do banco de dados do projeto e você não deseja fazer o import manualmente basta deixá-lo dentro da pasta **dumps**, sql mais recente até o presente momento.
-```bash
-  
-```
 
 - Se estiver usando o Visual Studio Code com a extensão Docker, abra o arquivo docker-compose.yml, clique com o botão direito e selecione **'Compose Up'**. Caso contrário, execute o seguinte comando no terminal, estando no diretório do arquivo:
 ```bash
@@ -30,4 +27,11 @@ Isso garantirá que o projeto funcione corretamente.
 ## Documentação do Projeto
 ```bash
   https://docs.google.com/document/d/1RdS4KkcIXjS8-lnN_7scZ16Rcv-SJ0tMDWJl8BVeOCY/edit?usp=drive_link
+```
+
+## Url do Projeto
+```bash
+  http://objctv_site.com:8010
+
+  http://objctv_site.com:8010/wp-admin
 ```
