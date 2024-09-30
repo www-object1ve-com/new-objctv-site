@@ -1,0 +1,71 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: objctv-site-mariadb
+    restart: always
+    volumes:
+      - ./dumps:/dumps
+      - ./mariadb-conf/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    networks:
+      - objctv-site-bridge
+    ports:
+      - "3310:3306"
+
+  nginx:
+    image: nginx
+    container_name: objctv-site-nginx
+    restart: always
+    volumes:
+      - ./site:/var/www/objctv-site
+      - ./nginx-conf:/etc/nginx/conf.d
+      - ./nginx-conf/snippets/fastcgi-php.conf:/etc/nginx/snippets/fastcgi-php.conf
+    depends_on:
+      - php
+    networks:
+      - objctv-site-bridge
+    ports:
+      - "8010:80"
+
+  php:
+    image: php:8.3-fpm
+    container_name: objctv-site-php-83
+    restart: always
+    volumes:
+      - ./site:/var/www/objctv-site
+    depends_on:
+      - mariadb
+    networks:
+      - objctv-site-bridge
+    ports:
+      - "9000:9000"     
+    build:
+      context: ./php83
+      dockerfile: Dockerfile
+
+  phpmyadmin:
+    container_name: objctv-site-phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    depends_on:
+      - mariadb
+    volumes:
+      - ./phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
+    networks:
+      - objctv-site-bridge
+      
+networks:
+  objctv-site-bridge:
+    driver: bridge
+
+volumes:
+  objctv-site-mariadb-data:
