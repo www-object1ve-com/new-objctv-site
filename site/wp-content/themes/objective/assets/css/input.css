@@ -1,3 +1,6 @@
+@import "../../components/footer/footer.css"; 
+@import "../../components/social-medias/social-media.css"; 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
