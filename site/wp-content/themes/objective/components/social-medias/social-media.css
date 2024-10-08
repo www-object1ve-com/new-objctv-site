@@ -1,0 +1,9 @@
+@layer components {
+    .social-area {
+        @apply flex gap-2;
+    }
+
+    .social-area .social-anchor {
+        @apply w-10 h-10 p-2 rounded-md bg-[#EEF6F9];
+    }
+}

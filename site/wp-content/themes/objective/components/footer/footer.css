@@ -1,0 +1,83 @@
+@layer components {
+    .footer-component {
+        @apply flex h-auto w-auto bg-black text-white px-6 pt-10 pb-20 relative;
+        @apply sm:h-[734px];
+        @apply md:px-32 md:h-[656px];
+        @apply lg:px-28 lg:h-[520px];
+        @apply 2xl:px-52;
+    }
+
+    .footer-component .footer-area {
+        @apply flex flex-col h-full w-full;
+    }
+
+    .footer-component .footer-area .main-image {
+        @apply pb-4 pt-10;
+    }
+
+    .footer-component .main-menu {
+        @apply flex gap-6 flex-wrap pt-6 border-t border-[#083248];
+        @apply md:flex-nowrap;
+    }
+
+    .footer-component .main-menu section {
+        @apply w-[100%] gap-4;
+        @apply sm:w-[47%];
+        @apply md:gap-6 md:w-[100%];
+    }
+
+    .footer-component .main-menu section h2 {
+        @apply font-bold uppercase;
+    }
+
+    .footer-component .main-menu .infos {
+        @apply flex flex-col gap-4 text-[#9FB5BC];
+    }
+
+    .footer-component .main-menu .infos .description {
+        @apply text-sm font-bold;
+    }
+
+    .footer-component .main-menu .infos .description b {
+        @apply text-white;
+    }
+
+    .footer-component .main-menu .infos .terms-conditional {
+        @apply text-sm font-bold;
+    }
+
+    /* Contact Area */
+    .footer-component .main-menu .contacts {
+        @apply flex flex-col gap-4;
+    }
+
+    .footer-component .main-menu .contacts .contact {
+        @apply flex flex-col;
+    }
+
+    .footer-component .main-menu .contacts .contact.e-mail p {
+        @apply text-white;
+    }
+
+    .footer-component .main-menu .contacts .contact p {
+        @apply text-[#9FB5BC] font-normal text-sm;
+    }
+
+    /* Menu Area */
+    .footer-component .main-menu .menu {
+        @apply flex flex-col gap-4;
+    }
+
+    .footer-component .main-menu .menu .footer-menu {
+        @apply flex flex-col gap-1 text-sm font-light text-[#9FB5BC];
+    }
+
+    .footer-component .main-menu .menu .footer-menu .menu-item a {
+        @apply leading-5;
+    }
+
+    .footer-component .transparent-image {
+        @apply absolute bottom-0 left-1;
+        @apply md:h-[178px];
+    }
+}

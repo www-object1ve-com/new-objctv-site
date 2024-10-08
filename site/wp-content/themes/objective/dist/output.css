@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.12 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.13 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -552,4 +552,233 @@ video {
 
 [hidden] {
   display: none;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.footer-component {
+  position: relative;
+  display: flex;
+  height: auto;
+  width: auto;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .footer-component {
+    height: 734px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-component {
+    height: 656px;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-component {
+    height: 520px;
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .footer-component {
+    padding-left: 13rem;
+    padding-right: 13rem;
+  }
+}
+
+.footer-component .footer-area {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.footer-component .footer-area .main-image {
+  padding-bottom: 1rem;
+  padding-top: 2.5rem;
+}
+
+.footer-component .main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(8 50 72 / var(--tw-border-opacity));
+  padding-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-component .main-menu {
+    flex-wrap: nowrap;
+  }
+}
+
+.footer-component .main-menu section {
+  width: 100%;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .footer-component .main-menu section {
+    width: 47%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-component .main-menu section {
+    width: 100%;
+    gap: 1.5rem;
+  }
+}
+
+.footer-component .main-menu section h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-component .main-menu .infos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(159 181 188 / var(--tw-text-opacity));
+}
+
+.footer-component .main-menu .infos .description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-component .main-menu .infos .description b {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.footer-component .main-menu .infos .terms-conditional {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+/* Contact Area */
+
+.footer-component .main-menu .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-component .main-menu .contacts .contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-component .main-menu .contacts .contact.e-mail p {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.footer-component .main-menu .contacts .contact p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(159 181 188 / var(--tw-text-opacity));
+}
+
+/* Menu Area */
+
+.footer-component .main-menu .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-component .main-menu .menu .footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  --tw-text-opacity: 1;
+  color: rgb(159 181 188 / var(--tw-text-opacity));
+}
+
+.footer-component .main-menu .menu .footer-menu .menu-item a {
+  line-height: 1.25rem;
+}
+
+.footer-component .transparent-image {
+  position: absolute;
+  bottom: 0px;
+  left: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .footer-component .transparent-image {
+    height: 178px;
+  }
+}
+
+.social-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-area .social-anchor {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 246 249 / var(--tw-bg-opacity));
+  padding: 0.5rem;
 }
